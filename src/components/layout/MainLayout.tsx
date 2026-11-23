@@ -1,0 +1,13 @@
+import React from 'react';
+import { Footer } from './Footer';
+import { Navbar } from './Navbar';
+
+export function MainLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="flex min-h-screen flex-col bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+      <Navbar />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+  );
+}
